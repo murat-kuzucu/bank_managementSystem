@@ -8,7 +8,7 @@ from gui import *
 class Deposit:
     def gui_1(self):
         if (self.e1.get()):
-            db = sqlite3.connect("sample.db")
+            db = sqlite3.connect("samp1.db")
             c = db.cursor()
             z = eval(self.e1.get())
             id = self.id
