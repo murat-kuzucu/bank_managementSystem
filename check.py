@@ -25,7 +25,7 @@ class Check_1:
         self.root.configure(bg="green")
 
         create_db()
-        db = sqlite3.connect("sample.db")
+        db = sqlite3.connect("samp1.db")
         c = db.cursor()
         # c.execute("select * from Bank")
         # [print(row) for row in c.fetchall()]
