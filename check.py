@@ -1,5 +1,6 @@
-from deposit import *
+from tkinter import *
 
+from deposit import *
 from register import *
 from withdrawl import *
 
@@ -19,10 +20,10 @@ class Check_1:
 
     def __init__(self, id):
         self.root = Tk()
-        self.root.title("State Bank of Turkey")
+        self.root.title("The State Bank of Turkey")
         self.root.geometry("600x400+300+165")
         self.root.resizable(width=False, height=False)
-        self.root.configure(bg="green")
+        self.root.configure(bg="cyan")
 
         create_db()
         db = sqlite3.connect("samp1.db")
@@ -34,10 +35,10 @@ class Check_1:
         c.execute("select * from Bank3 where id=?", list1)
         result = c.fetchall()
         if (result):
-            l1 = Label(self.root, text="Welcome!" + str(result[0][1]), bd=1, width=18, padx=10,
+            l1 = Label(self.root, text="Welcome  " + str(result[0][1]), bd=1, width=18, padx=10,
                        font="Times 22 bold", height=3, bg="cyan")
             l1.grid(row=1, column=0)
-            l2 = Label(self.root, text="Your last updated balance:", bd=1, width=19, padx=5,
+            l2 = Label(self.root, text="Your last updated bal :", bd=1, width=19, padx=5,
                        font="Times 18 ", height=3, bg="cyan", anchor='e')
             l2.grid(row=2, column=0)
             l2 = Label(self.root, text="Rs " + str(result[0][3]) + "  on  " + str(result[0][4]), bd=1, width=20,
@@ -47,7 +48,7 @@ class Check_1:
                         justify="right", relief='ridge', bg="green", activebackground="blue",
                         command=lambda: self.deposit_1(id))
             b2.grid(row=3, column=0)
-            b3 = Button(self.root, text="Withdraw", font="Times 20 bold", bd=10, width=15, height=1,
+            b3 = Button(self.root, text="Withdrawl", font="Times 20 bold", bd=10, width=15, height=1,
                         justify="right", relief='ridge', bg="green", activebackground="blue",
                         command=lambda: self.withdrawl_1(id))
             b3.grid(row=3, column=1)
