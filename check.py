@@ -10,7 +10,7 @@ from register import *
 from withdraw import *
 
 
-class Check: # Deposit withdraw and register
+class Customer: # Deposit withdraw and register
     def deposit(self, id):
         self.root.destroy()
         Deposit(id)
