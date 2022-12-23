@@ -43,6 +43,6 @@ class Mainroot():
         if (x1):
             x = eval(self.e1.get())
             self.root.destroy()
-            c = Check(x)
+            c = Customer(x)
         else:
             tkinter.messagebox.showinfo("Error", "Please Enter a A/C No")
